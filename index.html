@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telegram Content Feed</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- PapaParse for CSV parsing -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1><i class="fas fa-broadcast-tower"></i> Telegram Content Feed</h1>
+        <p>Updates automatically every 30 seconds. Filter posts by tag.</p>
+        <div class="controls">
+            <label for="tagFilter"><i class="fas fa-filter"></i> Filter by Tag:</label>
+            <select id="tagFilter">
+                <option value="all">All Posts</option>
+                <!-- Tags will be populated by JavaScript -->
+            </select>
+            <button id="refreshBtn"><i class="fas fa-sync-alt"></i> Refresh Now</button>
+        </div>
+    </header>
+
+    <main>
+        <div id="loading">
+            <i class="fas fa-spinner fa-spin"></i> Loading posts...
+        </div>
+        <div id="postsContainer" class="posts-grid">
+            <!-- Posts will be inserted here -->
+        </div>
+        <div id="noPosts" style="display: none;">
+            No posts to display.
+        </div>
+    </main>
+
+    <footer>
+        <p>Powered by Telegram + Google Sheets + Netlify • Auto‑refreshes every <span id="countdown">30</span>s</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
