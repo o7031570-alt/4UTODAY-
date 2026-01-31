@@ -1,6 +1,6 @@
 // ===== CONFIGURATION =====
 // Your Google Sheets CSV URL (already filled in)
-const CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQKLow94aPoADie7dT1HaUUb0X8jimzDTk1H4jqMDiS6G2-53MjvW97dMvpjmgbvc9X6W4CAMDmHcRT/pub?gid=0&single=true&output=csv";
+const API_BASE_URL = "https://fourutoday.onrender.com";
 // Refresh interval in milliseconds (30 seconds)
 const REFRESH_INTERVAL = 30000;
 // =========================
